@@ -10,11 +10,11 @@ require_once('controllers/NotFoundController.php');
 require_once('controllers/AliasController.php');
 
 $config = require_once('config.php');
-$routs = require_once('routs.php');
+$routes = require_once('routes.php');
 
 $request_uri = $_SERVER['REQUEST_URI'];
-$controller_class = array_key_exists($request_uri, $routs)
-    ? $routs[$request_uri]
+$controller_class = array_key_exists($request_uri, $routes)
+    ? $routes[$request_uri]
     : AliasController::class;
 $controller = new $controller_class($config);
 $controller->exec();
