@@ -1,0 +1,12 @@
+<?php
+
+return [
+    'db_config' => [
+        'host' => 'localhost',
+        'port' => '3306',
+        'dbname' => 'urlocut',
+        'user' => 'root',
+        'pass' => 'root',
+        'charset' => 'utf8',
+    ],
+];
