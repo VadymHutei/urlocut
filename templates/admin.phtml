@@ -1,0 +1,23 @@
+<h1>Admin</h1>
+<a href="/">Home</a>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>alias</th>
+            <th>link</th>
+            <th>dt_created</th>
+            <th>stat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($admin_data as $row) : ?>
+            <tr>
+                <td><?= $row['alias']; ?></td>
+                <td><?= $row['link']; ?></td>
+                <td><?= $row['dt_create']; ?></td>
+                <td><?= $row['count']; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
