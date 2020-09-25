@@ -2,12 +2,10 @@
 
 require_once('const.php');
 require_once('model.php');
-require_once('controllers/AbstractController.php');
-require_once('controllers/HomeController.php');
-require_once('controllers/AddController.php');
-require_once('controllers/AdminController.php');
-require_once('controllers/NotFoundController.php');
-require_once('controllers/AliasController.php');
+
+spl_autoload_register(function ($class_name) {
+    include "controllers/$class_name.php";
+});
 
 $config = require_once('config.php');
 $routes = require_once('routes.php');
