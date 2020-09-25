@@ -5,9 +5,9 @@ abstract class AbstractController
     /**
      * @param array $config
      */
-    public function __construct($config)
+    public function __construct($model)
     {
-        $this->model = new Model($config);
+        $this->model = $model;
     }
 
     abstract public function exec();
