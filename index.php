@@ -1,11 +1,14 @@
 <?php
 
 spl_autoload_register(function ($class_name) {
-    include "controllers/$class_name.php";
+    if (stripos($class_name, 'Controller')) {
+        include "controllers/$class_name.php";
+    } elseif (stripos($class_name, 'Model')) {
+        include "models/$class_name.php";
+    }
 });
 
 require_once('const.php');
-require_once('AliasModel.php');
 
 $config = require_once('config.php');
 $routes = require_once('routes.php');
