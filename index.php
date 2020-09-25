@@ -1,11 +1,11 @@
 <?php
 
-require_once('const.php');
-require_once('model.php');
-
 spl_autoload_register(function ($class_name) {
     include "controllers/$class_name.php";
 });
+
+require_once('const.php');
+require_once('model.php');
 
 $config = require_once('config.php');
 $routes = require_once('routes.php');
